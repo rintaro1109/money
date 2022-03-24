@@ -1,0 +1,10 @@
+<h1>タグ入力ページ</h1>
+
+<%= form_with model: @tag, local: true do |form| %>
+  <%= form.text_field :name, placeholder: "タグを入力して下さい。" %>
+  <%= form.submit "追加" %>
+<% end %>
+
+<%= link_to "支出入力", new_spending_path %>
+<!-- 支出詳細 -->
+<%= link_to "トップページに戻る", root_path %>

@@ -1,2 +1,8 @@
-<h1>支出管理アプリ</h1>
-<p>Find me in app/views/top/index.html.erb</p>
+<h1>『支出管理アプリ』</h1>
+<h2>今月の支出金額</h2>
+<p><%= @total_spending %>円</p>
+<p><%= link_to "支出入力ページ", new_spending_path %></p>
+<p><%= link_to "タグ入力ページ", new_tag_path %></p>
+<p><%= link_to "支出一覧", spendings_path %></p>
+<!-- spendings#editのパス -->
+<!-- tags#editのパス -->

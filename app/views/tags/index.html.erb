@@ -1,0 +1,5 @@
+<% @tags.each do |tag| %>
+  <span><%= tag.name %></span>
+  <%= link_to "削除", tag_path(tag.id), data: { turbo_method: :delete }  %>
+  <br>
+<% end %>

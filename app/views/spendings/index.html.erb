@@ -1,0 +1,5 @@
+<% @spendings.each do |spending| %>
+  <span><%= spending.price %></span>
+  <%= link_to "削除", spending_path(spending.id), data: { turbo_method: :delete } %>
+  <br>
+<% end %>

@@ -1,0 +1,10 @@
+<h1>支出入力ページ</h1>
+
+<p>支出金額を入力して下さい</p>
+
+<%= form_with model: @spending, local: true do |form| %>
+  <%= form.number_field :price, placeholder: "金額を入力して下さい。" %> 
+  <%= form.collection_select :tag_id, Tag.all, :id, :name, include_blank: "タグを選択して下さい" %>
+  <%= form.date_field :recorded_at, value:Time.now.strftime("%Y-%m-%d") %>
+  <%= form.submit "追加" %> 
+<% end %>
